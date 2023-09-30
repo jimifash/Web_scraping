@@ -169,10 +169,11 @@ df.to_csv("Top_Naija_Music_Trends_Boom_play.csv") #saving the dataframe
 #group = df.groupby([df.artist_name]).size()
 
 #Making the visualization
-color=('black','black','black','yellow','black','black','yellow','black','black','black','black','black','yellow','black','black','black','black','black','black','black',)
-sb.countplot(data = df, x=df.artist_name, palette=color)
+#color=('black','black','black','yellow','black','black','yellow','black','black','black','black','black','yellow','black','black','black','black','black','black','black',)
+sb.countplot(data = df, x=df.artist_name, color ='black')
 plt.xticks(rotation = 90)
 plt.title('ARTIST WTIH THE MOST AMOUNT OF TRENDING SONGS')
+plt.yscale('log')
 plt.show()
 
 #print (graph)
